@@ -407,9 +407,7 @@ namespace Treap
                 Root.Split(implicitIndex, key, value, out Node tempLeft, out Node tempRight);
 
                 // return two new Treaps to show the trees we now have by updating the root to reflect the
-                // nodes that were passed back in the call to Split.  Also update the count to reflect
-                // the number of items we have in the tree, which you can infer from the size of the subtree
-                // stored in the root node
+                // nodes that were passed back in the call to Split
                 if (tempLeft != null)
                 {
                     left = new Treap<T>()
