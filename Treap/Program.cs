@@ -229,9 +229,6 @@ namespace Treap
                     return Merge(Merge(left, m), right);
                 }
 
-                // if using implict indexes this may not work, as the tree could be in a state where the
-                // binary tree logic may not be correct (e.g., values less than the current node on the left,
-                // values greater than the current node on the right)
                 public INode GetIndex(Node node, int index)
                 {
                     INode foundNode = null;
