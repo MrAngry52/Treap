@@ -365,14 +365,12 @@ namespace Treap
                     return null;
                 }
 
-                int result = key.CompareTo(root.Key);
-
-                if (result < 0)
+                if (key < root.Key)
                 {
                     return Get(root.Left, key);
                 }
 
-                if (result > 0)
+                if (key > root.Key)
                 {
                     return Get(root.Right, key);
                 }
@@ -508,7 +506,7 @@ namespace Treap
             {
                 // we use zero based indexing, so subtract one from whatever is provided
                 int query = queries[index][0];
-                int start = queries[index][1]- 1;
+                int start = queries[index][1] - 1;
                 int end = queries[index][2] - 1;
 
                 // split the root into begin and end trees, storing the end tree into
